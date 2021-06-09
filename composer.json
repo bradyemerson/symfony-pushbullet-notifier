@@ -1,0 +1,24 @@
+{
+    "name": "bradyemerson/symfony-pushbullet-notifier",
+    "description": "Pushbullet notifier bridge for Symfony",
+    "type": "symfony-bridge",
+    "require": {
+        "ivkos/pushbullet": "^3.3"
+    },
+    "require-dev": {
+        "symfony/notifier": "^5.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brady Emerson",
+            "email": "brady@bradyemerson.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Symfony\\Component\\Notifier\\Bridge\\Pushbullet\\": "" },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    }
+}
