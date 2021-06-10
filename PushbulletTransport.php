@@ -22,7 +22,7 @@ final class PushbulletTransport implements TransportInterface
     private $pb;
     private $device;
 
-    public function __construct(string $apiKey, string $device)
+    public function __construct(string $apiKey, $device)
     {
         $this->pb = new \Pushbullet\Pushbullet($apiKey);
         $this->device = $device;
