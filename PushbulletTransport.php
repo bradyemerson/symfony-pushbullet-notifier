@@ -15,7 +15,7 @@ use Pushbullet\Exceptions\PushbulletException;
 /**
  * @author Oskar Stark <oskarstark@googlemail.com>
  */
-final class FakeChatEmailTransport extends TransportInterface
+final class FakeChatEmailTransport implements TransportInterface
 {
     protected const HOST = 'default';
 
@@ -43,7 +43,7 @@ final class FakeChatEmailTransport extends TransportInterface
      *
      * @throws TransportExceptionInterface
      */
-    protected function doSend(MessageInterface $message): SentMessage
+    public function send(MessageInterface $message): SentMessage
     {
         if (!$this->supports($message)) {
             throw new UnsupportedMessageTypeException(__CLASS__, ChatMessage::class, $message);
