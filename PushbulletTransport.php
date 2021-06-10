@@ -15,7 +15,7 @@ use Pushbullet\Exceptions\PushbulletException;
 /**
  * @author Oskar Stark <oskarstark@googlemail.com>
  */
-final class FakeChatEmailTransport implements TransportInterface
+final class PushbulletTransport implements TransportInterface
 {
     protected const HOST = 'default';
 
